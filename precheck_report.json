@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "generated_at": "2025-11-26 09:49:55",
+    "kube_vip": "",
+    "ports_checked": [
+      22,
+      6443,
+      2379,
+      10250
+    ]
+  },
+  "nodes": {
+    "10.61.3.85": {
+      "ip": "10.61.3.85",
+      "role": "worker",
+      "is_local": false,
+      "ping": {
+        "ok": true,
+        "detail": "Ping 성공"
+      },
+      "ssh": {
+        "ok": true,
+        "detail": "SSH 접속 성공"
+      },
+      "firewall": {
+        "ok": true,
+        "detail": "[ufw]\nStatus: inactive"
+      },
+      "ports": {
+        "10250": {
+          "ok": true,
+          "detail": "TCP접속:true, listening:true"
+        },
+        "22": {
+          "ok": true,
+          "detail": "TCP접속:true, listening:true"
+        },
+        "2379": {
+          "ok": false,
+          "detail": "TCP접속:false, listening:false"
+        },
+        "6443": {
+          "ok": false,
+          "detail": "TCP접속:false, listening:false"
+        }
+      },
+      "disk": {
+        "ok": true,
+        "detail": "Filesystem                        Type     Size  Used Avail Use% Mounted on\ntmpfs                             tmpfs    3.2G  1.5M  3.2G   1% /run\n/dev/mapper/ubuntu--vg-ubuntu--lv ext4      62G  9.2G   50G  16% /\ntmpfs                             tmpfs     16G     0   16G   0% /dev/shm\ntmpfs                             tmpfs    5.0M     0  5.0M   0% /run/lock\n/dev/vda2                         ext4     2.0G  320M  1.5G  18% /boot\ntmpfs                             tmpfs     32G  4.0K   32G   1% /var/lib/k0s/kubelet/pods/73e07f71-71b6-4220-9df9-bea03e7e543d/volumes/kubernetes.io~projected/konnectivity-agent-token\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/ce5cbe80-a1a6-4515-b86e-97725178dd29/volumes/kubernetes.io~projected/kube-api-access-ft4z5\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/73e07f71-71b6-4220-9df9-bea03e7e543d/volumes/kubernetes.io~projected/kube-api-access-cg4q5\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/1b57d655-7f05-4b5b-81cb-61ea1f6091f6/volumes/kubernetes.io~projected/kube-api-access-bckpv\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/3334b69d-1c2b-463e-bfcc-384f4afe5f0f/volumes/kubernetes.io~projected/kube-api-access-6zq9c\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/b9d95e4f75f122b48e14d4cb162cd9722ea0561aef34356543756bff91f87b3f/shm\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/39f231b18897f5c454d142da6fe9b583b8f55c2d71f899152260b23827953dd9/shm\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/006491a7da933742622c901bcbda5f00e974362d729f4b7dc46de53d78010cee/shm\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/60bcd1313a98ab99947a70e4c565f923a16d6f1644a0a9b3e2a2b2ded6fa18c8/shm\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/b9d95e4f75f122b48e14d4cb162cd9722ea0561aef34356543756bff91f87b3f/rootfs\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/60bcd1313a98ab99947a70e4c565f923a16d6f1644a0a9b3e2a2b2ded6fa18c8/rootfs\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/39f231b18897f5c454d142da6fe9b583b8f55c2d71f899152260b23827953dd9/rootfs\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/006491a7da933742622c901bcbda5f00e974362d729f4b7dc46de53d78010cee/rootfs\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/d9423981e4c51cedfa1e00bdc049b9940cbfbbfceb796b9437c496dcb811ca9d/rootfs\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/ccf4a5e70b1ffa4006612dfd3609597c9389e83f55112e944d9ef8ea36fd6f17/rootfs\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/82266d287bb8fbcecd1181b69fa18cc8dca6bd548187cbab1b2eb8e4e662a11a/rootfs\noverlay                           overlay   62G  9.2G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/d41b8a7c35507ca9e8ef0bc1fb0e2fc0cea390f7b89d5d293d59bce8c2ba9429/rootfs\ntmpfs                             tmpfs    3.2G  8.0K  3.2G   1% /run/user/0"
+      },
+      "resolv_conf": {
+        "ok": true,
+        "detail": "# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).\n# Do not edit.\n#\n# This file might be symlinked as /etc/resolv.conf. If you're looking at\n# /etc/resolv.conf and seeing this text, you have followed the symlink.\n#\n# This is a dynamic resolv.conf file for connecting local clients to the\n# internal DNS stub resolver of systemd-resolved. This file lists all\n# configured search domains.\n#\n# Run \"resolvectl status\" to see details about the uplink DNS servers\n# currently in use.\n#\n# Third party programs should typically not access this file directly, but only\n# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a\n# different way, replace this symlink by a static file or a different symlink.\n#\n# See man:systemd-resolved.service(8) for details about the supported modes of\n# operation for /etc/resolv.conf.\n\nnameserver 127.0.0.53\noptions edns0 trust-ad\nsearch ."
+      },
+      "sudo": {
+        "ok": true,
+        "detail": "sudo OK"
+      },
+      "ntp": {
+        "ok": true,
+        "detail": "Local time: Wed 2025-11-26 09:49:48 KST\n           Universal time: Wed 2025-11-26 00:49:48 UTC\n                 RTC time: Wed 2025-11-26 00:49:48\n                Time zone: Asia/Seoul (KST, +0900)\nSystem clock synchronized: yes\n              NTP service: active\n          RTC in local TZ: no"
+      },
+      "cpu_mem_gpu": {
+        "ok": true,
+        "detail": "Architecture:                       x86_64\nCPU op-mode(s):                     32-bit, 64-bit\nAddress sizes:                      40 bits physical, 48 bits virtual\nByte Order:                         Little Endian\nCPU(s):                             4\nOn-line CPU(s) list:                0-3\nVendor ID:                          GenuineIntel\nModel name:                         Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz\nCPU family:                         6\nModel:                              85\nThread(s) per core:                 1\nCore(s) per socket:                 1\nSocket(s):                          4\nStepping:                           4\nBogoMIPS:                           4190.17\nFlags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke md_clear arch_capabilities\nVirtualization:                     VT-x\nHypervisor vendor:                  KVM\nVirtualization type:                full\nL1d cache:                          128 KiB (4 instances)\nL1i cache:                          128 KiB (4 instances)\nL2 cache:                           16 MiB (4 instances)\nL3 cache:                           64 MiB (4 instances)\nNUMA node(s):                       1\nNUMA node0 CPU(s):                  0-3\nVulnerability Gather data sampling: Unknown: Dependent on hypervisor status\nVulnerability Itlb multihit:        Not affected\nVulnerability L1tf:                 Mitigation; PTE Inversion; VMX flush not necessary, SMT disabled\nVulnerability Mds:                  Mitigation; Clear CPU buffers; SMT Host state unknown\nVulnerability Meltdown:             Mitigation; PTI\nVulnerability Mmio stale data:      Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Retbleed:             Mitigation; IBRS\nVulnerability Spec rstack overflow: Not affected\nVulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:           Mitigation; IBRS, IBPB conditional, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected\nVulnerability Srbds:                Not affected\nVulnerability Tsx async abort:      Mitigation; Clear CPU buffers; SMT Host state unknown\n\ntotal        used        free      shared  buff/cache   available\nMem:            31Gi       477Mi        29Gi       2.0Mi       1.3Gi        30Gi\nSwap:          2.0Gi          0B       2.0Gi\n\nGPU 0: Tesla V100-PCIE-32GB (UUID: GPU-01380529-7586-7a37-f65e-5ea008335644)"
+      },
+      "internet": {
+        "ok": true,
+        "detail": "ping -c 1 8.8.8.8: OK\nping -c 1 google.com: OK"
+      },
+      "swap": {
+        "ok": true,
+        "detail": "NAME      TYPE SIZE USED PRIO\n/swap.img file   2G   0B   -2"
+      },
+      "kube_vip_nic": {
+        "ok": false,
+        "detail": "master node 또는 VIP 미지정"
+      }
+    },
+    "10.61.3.86": {
+      "ip": "10.61.3.86",
+      "role": "worker",
+      "is_local": false,
+      "ping": {
+        "ok": true,
+        "detail": "Ping 성공"
+      },
+      "ssh": {
+        "ok": true,
+        "detail": "SSH 접속 성공"
+      },
+      "firewall": {
+        "ok": true,
+        "detail": "[ufw]\nStatus: inactive"
+      },
+      "ports": {
+        "10250": {
+          "ok": true,
+          "detail": "TCP접속:true, listening:true"
+        },
+        "22": {
+          "ok": true,
+          "detail": "TCP접속:true, listening:true"
+        },
+        "2379": {
+          "ok": false,
+          "detail": "TCP접속:false, listening:false"
+        },
+        "6443": {
+          "ok": false,
+          "detail": "TCP접속:false, listening:false"
+        }
+      },
+      "disk": {
+        "ok": true,
+        "detail": "Filesystem                        Type     Size  Used Avail Use% Mounted on\ntmpfs                             tmpfs    3.2G  1.4M  3.2G   1% /run\n/dev/mapper/ubuntu--vg-ubuntu--lv ext4      62G  9.1G   50G  16% /\ntmpfs                             tmpfs     16G     0   16G   0% /dev/shm\ntmpfs                             tmpfs    5.0M     0  5.0M   0% /run/lock\n/dev/vda2                         ext4     2.0G  320M  1.5G  18% /boot\ntmpfs                             tmpfs     32G  4.0K   32G   1% /var/lib/k0s/kubelet/pods/135fac05-e31d-4b30-8886-418ec9e9892f/volumes/kubernetes.io~projected/konnectivity-agent-token\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/135fac05-e31d-4b30-8886-418ec9e9892f/volumes/kubernetes.io~projected/kube-api-access-9r5wz\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/f0e225c5-6d7f-479c-b650-780ee366429c/volumes/kubernetes.io~projected/kube-api-access-f4qww\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/2d467b62-3579-4403-b476-44bc9e0b13c7/volumes/kubernetes.io~projected/kube-api-access-9m8rs\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/013ce3cfb5b06eecdabb853280bfede397ee7300fb3e7b48456925912134057e/shm\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/09cb5467ebd9c6a7caacc16a78db669099dfc6bfcd0b858b3b618dd3729b5213/shm\noverlay                           overlay   62G  9.1G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/09cb5467ebd9c6a7caacc16a78db669099dfc6bfcd0b858b3b618dd3729b5213/rootfs\noverlay                           overlay   62G  9.1G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/013ce3cfb5b06eecdabb853280bfede397ee7300fb3e7b48456925912134057e/rootfs\noverlay                           overlay   62G  9.1G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/8de9434c8817b1673010e231b1d8a0919211550587dd35a8d26cb42c846d8f39/rootfs\noverlay                           overlay   62G  9.1G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/e747db7804e6822071ef1cbad322910e61c7da63cd56956f7f931e818e42eac6/rootfs\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/0a214edece6fe57d038f50f3be28d7ce74802d8bb3594cdcd6765c5dd910c067/shm\noverlay                           overlay   62G  9.1G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/0a214edece6fe57d038f50f3be28d7ce74802d8bb3594cdcd6765c5dd910c067/rootfs\noverlay                           overlay   62G  9.1G   50G  16% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/25004a10ab2b3d057c6e5417f5eef33d0285dd7936cd3d76163ed350ed3030b9/rootfs\ntmpfs                             tmpfs    3.2G  8.0K  3.2G   1% /run/user/0"
+      },
+      "resolv_conf": {
+        "ok": true,
+        "detail": "# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).\n# Do not edit.\n#\n# This file might be symlinked as /etc/resolv.conf. If you're looking at\n# /etc/resolv.conf and seeing this text, you have followed the symlink.\n#\n# This is a dynamic resolv.conf file for connecting local clients to the\n# internal DNS stub resolver of systemd-resolved. This file lists all\n# configured search domains.\n#\n# Run \"resolvectl status\" to see details about the uplink DNS servers\n# currently in use.\n#\n# Third party programs should typically not access this file directly, but only\n# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a\n# different way, replace this symlink by a static file or a different symlink.\n#\n# See man:systemd-resolved.service(8) for details about the supported modes of\n# operation for /etc/resolv.conf.\n\nnameserver 127.0.0.53\noptions edns0 trust-ad\nsearch ."
+      },
+      "sudo": {
+        "ok": true,
+        "detail": "sudo OK"
+      },
+      "ntp": {
+        "ok": true,
+        "detail": "Local time: Wed 2025-11-26 09:49:52 KST\n           Universal time: Wed 2025-11-26 00:49:52 UTC\n                 RTC time: Wed 2025-11-26 00:49:52\n                Time zone: Asia/Seoul (KST, +0900)\nSystem clock synchronized: yes\n              NTP service: active\n          RTC in local TZ: no"
+      },
+      "cpu_mem_gpu": {
+        "ok": true,
+        "detail": "Architecture:                       x86_64\nCPU op-mode(s):                     32-bit, 64-bit\nAddress sizes:                      40 bits physical, 48 bits virtual\nByte Order:                         Little Endian\nCPU(s):                             4\nOn-line CPU(s) list:                0-3\nVendor ID:                          GenuineIntel\nModel name:                         Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz\nCPU family:                         6\nModel:                              85\nThread(s) per core:                 1\nCore(s) per socket:                 1\nSocket(s):                          4\nStepping:                           4\nBogoMIPS:                           4190.17\nFlags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke md_clear arch_capabilities\nVirtualization:                     VT-x\nHypervisor vendor:                  KVM\nVirtualization type:                full\nL1d cache:                          128 KiB (4 instances)\nL1i cache:                          128 KiB (4 instances)\nL2 cache:                           16 MiB (4 instances)\nL3 cache:                           64 MiB (4 instances)\nNUMA node(s):                       1\nNUMA node0 CPU(s):                  0-3\nVulnerability Gather data sampling: Unknown: Dependent on hypervisor status\nVulnerability Itlb multihit:        Not affected\nVulnerability L1tf:                 Mitigation; PTE Inversion; VMX flush not necessary, SMT disabled\nVulnerability Mds:                  Mitigation; Clear CPU buffers; SMT Host state unknown\nVulnerability Meltdown:             Mitigation; PTI\nVulnerability Mmio stale data:      Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Retbleed:             Mitigation; IBRS\nVulnerability Spec rstack overflow: Not affected\nVulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:           Mitigation; IBRS, IBPB conditional, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected\nVulnerability Srbds:                Not affected\nVulnerability Tsx async abort:      Mitigation; Clear CPU buffers; SMT Host state unknown\n\ntotal        used        free      shared  buff/cache   available\nMem:            31Gi       468Mi        28Gi       2.0Mi       2.4Gi        30Gi\nSwap:          2.0Gi          0B       2.0Gi\n\nGPU 0: Tesla V100-PCIE-32GB (UUID: GPU-39d3c0a4-2961-5058-1dda-018d815308ff)"
+      },
+      "internet": {
+        "ok": true,
+        "detail": "ping -c 1 8.8.8.8: OK\nping -c 1 google.com: OK"
+      },
+      "swap": {
+        "ok": true,
+        "detail": "NAME      TYPE SIZE USED PRIO\n/swap.img file   2G   0B   -2"
+      },
+      "kube_vip_nic": {
+        "ok": false,
+        "detail": "master node 또는 VIP 미지정"
+      }
+    },
+    "10.61.3.89": {
+      "ip": "10.61.3.89",
+      "role": "master",
+      "is_local": false,
+      "ping": {
+        "ok": true,
+        "detail": "Ping 성공"
+      },
+      "ssh": {
+        "ok": true,
+        "detail": "SSH 접속 성공"
+      },
+      "firewall": {
+        "ok": true,
+        "detail": "[ufw]\nStatus: inactive"
+      },
+      "ports": {
+        "10250": {
+          "ok": true,
+          "detail": "TCP접속:true, listening:true"
+        },
+        "22": {
+          "ok": true,
+          "detail": "TCP접속:true, listening:true"
+        },
+        "2379": {
+          "ok": true,
+          "detail": "TCP접속:false, listening:true"
+        },
+        "6443": {
+          "ok": true,
+          "detail": "TCP접속:true, listening:true"
+        }
+      },
+      "disk": {
+        "ok": true,
+        "detail": "Filesystem                        Type     Size  Used Avail Use% Mounted on\ntmpfs                             tmpfs    3.2G  1.6M  3.2G   1% /run\n/dev/mapper/ubuntu--vg-ubuntu--lv ext4      62G  7.5G   52G  13% /\ntmpfs                             tmpfs     16G     0   16G   0% /dev/shm\ntmpfs                             tmpfs    5.0M     0  5.0M   0% /run/lock\n/dev/vda2                         ext4     2.0G  234M  1.6G  13% /boot\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/c5b86e87-d68e-4c41-9fc0-f2b17735cf0d/volumes/kubernetes.io~projected/kube-api-access-7kjmm\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/940dc81a-7510-497d-9851-27f044a54b25/volumes/kubernetes.io~projected/kube-api-access-hdbzp\ntmpfs                             tmpfs     32G  4.0K   32G   1% /var/lib/k0s/kubelet/pods/d54e22cc-0c0f-48b9-b7ed-9d62e806eb64/volumes/kubernetes.io~projected/konnectivity-agent-token\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/d54e22cc-0c0f-48b9-b7ed-9d62e806eb64/volumes/kubernetes.io~projected/kube-api-access-zj6nm\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/4903e16e-63fc-47e4-a88d-4a80e2b731fd/volumes/kubernetes.io~projected/kube-api-access-qgcbg\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/a8e046b4276768fcd434fa8c36ff2291650896b617989493d30fb1a29610f2a7/shm\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/4e8a1e209b2f01b65307c1d944c45ef50fdb244a99226d0ea459bf6e2fe35f10/shm\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/a8e046b4276768fcd434fa8c36ff2291650896b617989493d30fb1a29610f2a7/rootfs\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/7acd24b78b6cf522c91322824201b7f6bacd065c2884acc01f3ec51cfa6ed682/shm\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/df34c72b72227ebbcb09d162b3ada38d7bbce5dd1e63eefe9666e46dc60a2038/shm\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/7acd24b78b6cf522c91322824201b7f6bacd065c2884acc01f3ec51cfa6ed682/rootfs\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/4e8a1e209b2f01b65307c1d944c45ef50fdb244a99226d0ea459bf6e2fe35f10/rootfs\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/df34c72b72227ebbcb09d162b3ada38d7bbce5dd1e63eefe9666e46dc60a2038/rootfs\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/fb1d00e1d5c1d98f60d44860240afb20aa64b3775b19c1604b6c9ba78973e9fe/rootfs\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/02f56b8d386ffcf8b1bc5ba114110e08f7beef6dd7b442bb7999cd410645e342/rootfs\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/226a99983ab6f0e6bb07960266d35248dc56e7b5d2b52dae2f213f7bbb692b06/rootfs\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/70b27912c16eb6b6be988a22c3c8d24759073e84e16b8a151c3224cda5850e32/rootfs\ntmpfs                             tmpfs     32G   12K   32G   1% /var/lib/k0s/kubelet/pods/da02c5c1-f51f-4783-a9e8-c8c7b3cff527/volumes/kubernetes.io~projected/kube-api-access-ksmhc\nshm                               tmpfs     64M     0   64M   0% /run/k0s/containerd/io.containerd.grpc.v1.cri/sandboxes/c4d59a4fddce2db44d3f336189e02be28b5b7b88976d0dd7b00410ff0da81b12/shm\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/c4d59a4fddce2db44d3f336189e02be28b5b7b88976d0dd7b00410ff0da81b12/rootfs\noverlay                           overlay   62G  7.5G   52G  13% /run/k0s/containerd/io.containerd.runtime.v2.task/k8s.io/6e53f53617946744efd9489b1a0e64787197e0b7f29d013d3a0de38101a717d5/rootfs\ntmpfs                             tmpfs    3.2G  4.0K  3.2G   1% /run/user/0"
+      },
+      "resolv_conf": {
+        "ok": true,
+        "detail": "# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).\n# Do not edit.\n#\n# This file might be symlinked as /etc/resolv.conf. If you're looking at\n# /etc/resolv.conf and seeing this text, you have followed the symlink.\n#\n# This is a dynamic resolv.conf file for connecting local clients to the\n# internal DNS stub resolver of systemd-resolved. This file lists all\n# configured search domains.\n#\n# Run \"resolvectl status\" to see details about the uplink DNS servers\n# currently in use.\n#\n# Third party programs should typically not access this file directly, but only\n# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a\n# different way, replace this symlink by a static file or a different symlink.\n#\n# See man:systemd-resolved.service(8) for details about the supported modes of\n# operation for /etc/resolv.conf.\n\nnameserver 127.0.0.53\noptions edns0 trust-ad\nsearch ."
+      },
+      "sudo": {
+        "ok": true,
+        "detail": "sudo OK"
+      },
+      "ntp": {
+        "ok": true,
+        "detail": "Local time: Wed 2025-11-26 09:49:44 KST\n           Universal time: Wed 2025-11-26 00:49:44 UTC\n                 RTC time: Wed 2025-11-26 00:49:44\n                Time zone: Asia/Seoul (KST, +0900)\nSystem clock synchronized: yes\n              NTP service: active\n          RTC in local TZ: no"
+      },
+      "cpu_mem_gpu": {
+        "ok": true,
+        "detail": "Architecture:                       x86_64\nCPU op-mode(s):                     32-bit, 64-bit\nAddress sizes:                      40 bits physical, 48 bits virtual\nByte Order:                         Little Endian\nCPU(s):                             4\nOn-line CPU(s) list:                0-3\nVendor ID:                          GenuineIntel\nModel name:                         Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz\nCPU family:                         6\nModel:                              85\nThread(s) per core:                 1\nCore(s) per socket:                 1\nSocket(s):                          4\nStepping:                           4\nBogoMIPS:                           4190.17\nFlags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke md_clear arch_capabilities\nVirtualization:                     VT-x\nHypervisor vendor:                  KVM\nVirtualization type:                full\nL1d cache:                          128 KiB (4 instances)\nL1i cache:                          128 KiB (4 instances)\nL2 cache:                           16 MiB (4 instances)\nL3 cache:                           64 MiB (4 instances)\nNUMA node(s):                       1\nNUMA node0 CPU(s):                  0-3\nVulnerability Gather data sampling: Unknown: Dependent on hypervisor status\nVulnerability Itlb multihit:        Not affected\nVulnerability L1tf:                 Mitigation; PTE Inversion; VMX flush not necessary, SMT disabled\nVulnerability Mds:                  Mitigation; Clear CPU buffers; SMT Host state unknown\nVulnerability Meltdown:             Mitigation; PTI\nVulnerability Mmio stale data:      Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Retbleed:             Mitigation; IBRS\nVulnerability Spec rstack overflow: Not affected\nVulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:           Mitigation; IBRS, IBPB conditional, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected\nVulnerability Srbds:                Not affected\nVulnerability Tsx async abort:      Mitigation; Clear CPU buffers; SMT Host state unknown\n\ntotal        used        free      shared  buff/cache   available\nMem:            31Gi       840Mi        28Gi       3.0Mi       1.9Gi        30Gi\nSwap:          2.0Gi          0B       2.0Gi\n\nnvidia-smi -L 실패"
+      },
+      "internet": {
+        "ok": true,
+        "detail": "ping -c 1 8.8.8.8: OK\nping -c 1 google.com: OK"
+      },
+      "swap": {
+        "ok": true,
+        "detail": "NAME      TYPE SIZE USED PRIO\n/swap.img file   2G   0B   -2"
+      },
+      "kube_vip_nic": {
+        "ok": false,
+        "detail": "master node 또는 VIP 미지정"
+      }
+    }
+  }
+}
