@@ -54,55 +54,14 @@ Kubernetes 클러스터 배포 전 Linux 노드 사전 점검 도구입니다. S
 - Go 1.21 이상
 - Linux 환경 (또는 macOS/Windows에서 원격 체크)
 
-### Go 설치 가이드
+### Go 설치
 
-#### macOS
-```bash
-# Homebrew를 사용한 설치 (권장)
-brew install go
+Go가 설치되어 있지 않다면 [Go-INSTALL.md](Go-INSTALL.md) 파일을 참조하여 설치하세요.
 
-# 또는 공식 설치 파일 다운로드
-# https://go.dev/dl/ 에서 macOS용 .pkg 파일 다운로드 및 설치
-```
-
-#### Linux
-```bash
-# Ubuntu/Debian
-sudo apt-get update
-sudo apt-get install -y golang-go
-
-# 또는 최신 버전 설치 (snap 사용)
-sudo snap install go --classic
-
-# 또는 공식 바이너리 설치
-wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
-source ~/.bashrc
-```
-
-#### Windows
-1. https://go.dev/dl/ 에서 Windows용 설치 파일(.msi) 다운로드
-2. 설치 파일 실행 및 설치
-3. 설치 후 새 터미널에서 `go version` 명령으로 확인
-
-#### 설치 확인
-```bash
-go version
-# 출력 예시: go version go1.21.5 darwin/amd64
-```
-
-#### 환경 변수 설정 (필요시)
-```bash
-# Go 작업 디렉토리 설정 (선택사항)
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
-# ~/.bashrc 또는 ~/.zshrc에 추가하여 영구 설정
-echo 'export GOPATH=$HOME/go' >> ~/.bashrc
-echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
-```
+간단한 설치 방법:
+- **macOS**: `brew install go`
+- **Linux**: `sudo apt-get install golang-go` 또는 [Go-INSTALL.md](Go-INSTALL.md) 참조
+- **Windows**: https://go.dev/dl/ 에서 설치 파일 다운로드
 
 ### 빌드 방법
 
@@ -274,11 +233,4 @@ Docker로 빌드한 바이너리가 서버에서 실행되지 않는 경우 (예
 2. **CGO 비활성화 빌드**: 현재 `build-linux.sh`는 `CGO_ENABLED=0`로 빌드하여 정적 링크를 사용합니다.
    - 이렇게 빌드된 바이너리는 GLIBC 의존성이 없어 Ubuntu 20.04 (GLIBC 2.31) 이상에서 실행 가능합니다.
    - 만약 여전히 문제가 발생한다면, 서버에서 네이티브 빌드를 사용하는 것을 권장합니다.
-
-## 라이선스
-
-이 프로젝트의 라이선스 정보를 여기에 추가하세요.
-
-## 기여
-
-기여를 환영합니다! 이슈나 Pull Request를 통해 참여해 주세요.
+   
