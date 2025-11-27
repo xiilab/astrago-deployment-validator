@@ -61,7 +61,7 @@ Go가 설치되어 있지 않다면 [Go-INSTALL.md](Go-INSTALL.md) 파일을 참
 간단한 설치 방법:
 - **macOS**: `brew install go`
 - **Linux**: `sudo apt-get install golang-go` 또는 [Go-INSTALL.md](Go-INSTALL.md) 참조
-- **Windows**: https://go.dev/dl/ 에서 설치 파일 다운로드
+- **Windows**: [Go 설치파일 다운로드](https://go.dev/dl/) 에서 설치 파일 다운로드
 
 ### 빌드 방법
 
@@ -111,7 +111,7 @@ GO_VERSION=1.24 ./build-linux.sh
   --key ~/.ssh/id_rsa \
   --kube-vip 192.168.1.100 \
   --ports "22,6443,2379,10250" \
-  --output precheck_report.json
+  --output precheck_report
 ```
 
 #### 3. 원격 노드 체크 (비밀번호 사용)
