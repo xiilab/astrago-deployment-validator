@@ -4,7 +4,9 @@
 
 ## 필수 요구사항
 
-- Go 1.21 이상
+- **빌드 시**: Go 1.24 이상 필요
+  - `go.mod`에 `go 1.24.0`으로 명시되어 있습니다
+  - 빌드된 바이너리는 실행 시 Go가 필요 없습니다 (정적 링크)
 - Linux 환경 (또는 macOS/Windows에서 원격 체크)
 
 ## 설치 방법
@@ -51,7 +53,7 @@ source ~/.bashrc
 
 ### Windows
 
-1. https://go.dev/dl/ 에서 Windows용 설치 파일(.msi) 다운로드
+1. [Go 다운로드 페이지](https://go.dev/dl/) 에서 Windows용 설치 파일(.msi) 다운로드
 2. 설치 파일 실행 및 설치
 3. 설치 후 새 터미널에서 `go version` 명령으로 확인
 
@@ -64,7 +66,7 @@ go version
 ```
 
 출력 예시:
-```
+```bash
 go version go1.21.5 darwin/amd64
 ```
 
@@ -98,7 +100,7 @@ source ~/.zshrc
 
 ## 추가 정보
 
-- 공식 Go 웹사이트: https://go.dev/
-- 공식 설치 가이드: https://go.dev/doc/install
-- 최신 버전 다운로드: https://go.dev/dl/
+- 공식 Go 웹사이트: [https://go.dev/](https://go.dev/)
+- 공식 설치 가이드: [https://go.dev/doc/install](https://go.dev/doc/install)
+- 최신 버전 다운로드: [https://go.dev/dl/](https://go.dev/dl/)
 

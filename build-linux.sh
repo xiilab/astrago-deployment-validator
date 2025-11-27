@@ -7,6 +7,9 @@ PLATFORMS=${PLATFORMS:-"linux/amd64,linux/arm64"}
 
 echo "=== Go Linux 빌드 시작 ==="
 
+# 디렉토리 생성
+mkdir -p dist
+
 # 빌드할 플랫폼 목록
 IFS=',' read -ra PLATFORM_ARRAY <<< "$PLATFORMS"
 

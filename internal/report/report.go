@@ -3,6 +3,7 @@ package report
 import (
 	"encoding/json"
 	"fmt"
+	"html"
 	"os"
 	"path/filepath"
 	"strings"
@@ -160,41 +161,46 @@ func formatStatus(ok bool) string {
 }
 
 func convertMarkdownToHTML(mdText string) string {
-	var html []string
+	var htmlLines []string
 	lines := strings.Split(mdText, "\n")
 	inCode := false
 
 	for _, line := range lines {
 		if strings.HasPrefix(line, "```") {
 			if !inCode {
-				html = append(html, "<pre><code>")
+				htmlLines = append(htmlLines, "<pre><code>")
 				inCode = true
 			} else {
-				html = append(html, "</code></pre>")
+				htmlLines = append(htmlLines, "</code></pre>")
 				inCode = false
 			}
 			continue
 		}
 
 		if inCode {
-			html = append(html, line)
+			// 코드 블록 내부도 HTML 이스케이핑 필요
+			htmlLines = append(htmlLines, html.EscapeString(line))
 			continue
 		}
 
 		if strings.HasPrefix(line, "# ") {
-			html = append(html, fmt.Sprintf("<h1>%s</h1>", strings.TrimSpace(line[2:])))
+			content := strings.TrimSpace(line[2:])
+			htmlLines = append(htmlLines, fmt.Sprintf("<h1>%s</h1>", html.EscapeString(content)))
 		} else if strings.HasPrefix(line, "## ") {
-			html = append(html, fmt.Sprintf("<h2>%s</h2>", strings.TrimSpace(line[3:])))
+			content := strings.TrimSpace(line[3:])
+			htmlLines = append(htmlLines, fmt.Sprintf("<h2>%s</h2>", html.EscapeString(content)))
 		} else if strings.HasPrefix(line, "### ") {
-			html = append(html, fmt.Sprintf("<h3>%s</h3>", strings.TrimSpace(line[4:])))
+			content := strings.TrimSpace(line[4:])
+			htmlLines = append(htmlLines, fmt.Sprintf("<h3>%s</h3>", html.EscapeString(content)))
 		} else if strings.HasPrefix(line, "- ") {
-			html = append(html, fmt.Sprintf("<li>%s</li>", strings.TrimSpace(line[2:])))
+			content := strings.TrimSpace(line[2:])
+			htmlLines = append(htmlLines, fmt.Sprintf("<li>%s</li>", html.EscapeString(content)))
 		} else if strings.TrimSpace(line) == "---" {
-			html = append(html, "<hr>")
+			htmlLines = append(htmlLines, "<hr>")
 		} else if strings.TrimSpace(line) != "" {
-			html = append(html, fmt.Sprintf("<p>%s</p>", line))
+			htmlLines = append(htmlLines, fmt.Sprintf("<p>%s</p>", html.EscapeString(line)))
 		}
 	}
 
-	return strings.Join(html, "\n")
+	return strings.Join(htmlLines, "\n")
 }
